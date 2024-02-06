@@ -1,6 +1,6 @@
 # Use the latest version 2 of the Cycloid stack engine.
 version: 2
-name: rp first stack
+name: rp first stack 1
 canonical: rp_first_stack
 author: 'robert_parkin'
 # Fill in the stack details.

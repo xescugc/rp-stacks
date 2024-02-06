@@ -1,7 +1,7 @@
 # Use the latest version 2 of the Cycloid stack engine.
 version: 2
-name: rp second stack 2
-canonical: rp_second_stack
+name: rp third stack 3
+canonical: rp_third_stack
 author: 'robert_parkin'
 # Fill in the stack details.
 description: 'The bare minimum files to build your stack from scratch.'
