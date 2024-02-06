@@ -1,0 +1,50 @@
+# Use the latest version 2 of the Cycloid StackForms engine.
+version: 2
+
+# Define the stack configuration form and organize inputs of various types into sections and groups.
+# See: https://docs.staging.cycloid.io/deploy/stackforms/file-format.html
+use_cases:
+- name: default
+  sections:
+  - name: Example section
+    groups:
+    - name: Example group
+      technologies: [pipeline]
+      vars:
+      - name: "Azure Subscription ID"
+        description: "The azure subscription id used to deploy the infrastructure. Make sure to select the correct key."
+        key: azure_subscription_id
+        widget: cy_cred
+        widget_config:
+          cred_types:
+            - azure
+        type: string
+        required: true
+      - name: "Azure Tenant ID"
+        description: "The azure tenant id used to deploy the infrastructure. Make sure to select the correct key."
+        key: azure_tenant_id
+        widget: cy_cred
+        widget_config:
+          cred_types:
+            - azure
+        type: string
+        required: true
+      - name: "Azure Client ID"
+        description: "The azure client id used to deploy the infrastructure. Make sure to select the correct key."
+        key: azure_client_id
+        widget: cy_cred
+        widget_config:
+          cred_types:
+            - azure
+        type: string
+        required: true
+      - name: "Azure Client Secret"
+        description: "The azure client secret used to deploy the infrastructure. Make sure to select the correct key."
+        key: azure_client_secret
+        widget: cy_cred
+        widget_config:
+          cred_types:
+            - azure
+        type: string
+        required: true
+
