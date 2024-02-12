@@ -1,6 +1,6 @@
 version: "2"
 use_cases:
-- name: "default"
+- name: "Demo usecase"
   sections:
   - name: "My section"
     groups:
