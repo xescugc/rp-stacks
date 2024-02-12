@@ -1,0 +1,101 @@
+version: "2"
+use_cases:
+- name: "Demo usecase"
+  sections:
+  - name: "My section"
+    groups:
+    - name: "My group"
+      technologies: ["pipeline", "terraform"]
+      vars:
+        - name: "text"
+          widget: text_area
+          key: mytext
+          type: "string"
+          default: this is a text area
+        - name: "array"
+          key: myarray
+          widget: text_area
+          type: array
+          default:
+          - subnet-id1
+          - subnet-id2
+        - name: "map"
+          key: mymap
+          widget: text_area
+          type: map
+          default:
+            tags:
+              foo: 1
+              bar: "test"
+#        - name: "raw format"
+#          key: myraw
+#          widget: text_area
+#          type: raw
+#          default: |-
+#            #!/bin/sh
+#            echo "this is a sh script"
+#            exit 1
+        - name: "multi text"
+          key: mytext2
+          widget: text_area
+          type: string
+          default: |-
+             This is just
+             a text
+
+
+
+
+#version: 2
+#use_cases:
+#- name: default
+#  sections:
+#  - name: Example section
+#    technologies: [pipeline]
+#    groups:
+#          - name: "Relational Database"
+#            technologies: [pipeline]
+#            vars:
+#              - name: Database engine
+#                key: database_engine
+#                widget: dropdown
+#                values:
+#                  - label: MySQL
+#                    value: mysql
+#                  - label: PostgreSQL
+#                    value: postgres
+#                type: map
+#                required: true
+#                default: MySQL
+#              - name: Database engine version
+#                description: Which version of MySQL to use
+#                key: database_engine_version
+#                widget: dropdown
+#                type: string
+#                required: true
+#                values:
+#                  options:
+#                    - condition: $database_engine == 'MySQL'
+#                    #- condition: $database_engine == 'MySQL' || $database_engine == 'mysql'
+#                      values: ["8.0", "5.7"]
+#                    - condition: $database_engine == 'PostgreSQL'
+#                      values: ["13", "14", "15"]
+#                default:
+#                  options:
+#                    - condition: $database_engine == 'MySQL'
+#                    #- condition: $database_engine == 'MySQL' || $database_engine == 'mysql'
+#                      default: "8.0"
+#                    - condition: $database_engine == 'PostgreSQL'
+#                      default: "14"
+#              - name: Database port
+#                key: database_port
+#                widget: simple_text
+#                type: string
+#                required: true
+#                default:
+#                  options:
+#                    - condition: $database_engine == 'MySQL'
+#                    #- condition: $database_engine == 'MySQL' || $database_engine == 'mysql'
+#                      default: "3306"
+#                    - condition: $database_engine == 'PostgreSQL'
+#                      default: "5432"
