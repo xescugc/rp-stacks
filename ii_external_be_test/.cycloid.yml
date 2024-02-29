@@ -1,0 +1,23 @@
+version: "2"
+name: ii external be test
+canonical: ii_external_be_test
+author: robert_parkin
+status: private
+description: ii external be test
+image: ""
+keywords:
+- ii external be test
+- provider:aws
+template: false
+template_ignore: []
+technologies: []
+dependencies: []
+config:
+  default:
+    name: default
+    pipeline:
+      pipeline:
+        path: pipeline/default/terraform-pipeline.yaml
+      variables:
+        destination: ($ project $)/pipeline/variables-($ environment $).yml
+        path: pipeline/default/variables.sample.yaml
