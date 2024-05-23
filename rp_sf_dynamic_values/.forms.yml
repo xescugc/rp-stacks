@@ -19,17 +19,6 @@ use_cases:
         widget: dropdown
         type: string
         values: ["demo", "staging"]
-      - name: "Virtual network"
-        description: "Select multiple AWS VPC in which to deploy this environment sub network."
-        key: resource_widget_example
-        widget: cy_inventory_resource
-        type: string
-        required: true
-        widget_config:
-          attribute: id
-          filters:
-            environment: ${resource_env}
-
       - name: Data source
         key: data_source
         widget: dropdown
