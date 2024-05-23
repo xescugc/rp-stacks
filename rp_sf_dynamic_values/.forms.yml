@@ -5,7 +5,7 @@ use_cases:
   - name: terraform
     groups:
     - name: application
-      technologies: [terraform]
+      technologies: [pipeline]
       vars:
       - name: Team
         description: The team responsible for this environment
